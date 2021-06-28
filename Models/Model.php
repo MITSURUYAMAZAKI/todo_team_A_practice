@@ -20,10 +20,12 @@ class Model
     // DBからデータを全て取得するメソッド
     public function getAll()
     {
-        // 実行するSQL
+        // 実行するSQLを準備する
         $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' ORDER BY created DESC');
-
-      
+        // 準備したSQLを実行する
+        $stmt->execute();
+        $tasks = $stmt->fetchAll();
+        return $tasks;
     }
 
     // idを指定してデータを1件取得するメソッド
