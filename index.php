@@ -17,30 +17,18 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-         <!--  ここから全ページ共通 -->
-    <header>
-        <span class="header-left">ToDo_team_A</span>
-            <ul>
-                <li><a href="#">Create</a></li>
-                <li><a href="#">sign in</a></li>
-                <li><form class="form-inline">
-                    <input class="form" type="search" placeholder="word" aria-label="Search" name="title">
-                    <button class="search" type="submit">Search</button>
-                </form></li>
-            </ul>
-    </header>
-  <!--  ここまで全ページ共通 -->
+    <?php include('./include/header.php'); ?>
     <main>
         <div class="feed">
-        <?php foreach ($tasks as $value):?>
-            <div class="article">
-                <img src="./images/macbook.png" alt="<?php echo "$value[0]";?>" class="photo" width="350px" height="350px">
-                <h1 class="title"><?php echo $value['title']; ?></h1>
-                <p class="contents"><?php echo $value['contents']; ?></p>
-            </div>
-        <?php endforeach; ?>
+            <?php foreach ($tasks as $value):?>
+                <div class="article">
+                    <img src="./images/macbook.png" alt="<?php echo "$value[0]";?>" class="photo" width="350px" height="350px">
+                    <h1 class="title"><?php echo $value['title']; ?></h1>
+                    <p class="contents"><?php echo $value['contents']; ?></p>
+                </div>
+            <?php endforeach; ?>
         </div>
     </main>
-    <footer></footer>
+    <?php include('./include/footer.php'); ?>
 </body>
 </html>
