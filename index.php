@@ -1,10 +1,8 @@
 <?php
-    require_once('./Models/Model.php');
     require_once('./Models/Task.php');
     
     $task = new Task();
     $tasks =  $task->getAll();
-    // var_dump($tasks);
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +20,7 @@
         <div class="feed">
             <?php foreach ($tasks as $value):?>
                 <div class="article">
-                    <img src="./images/macbook.png" alt="<?php echo "$value[0]";?>" class="photo" width="350px" height="350px">
+                    <img src="./images/macbook.png" alt="<?php echo $value['title'];?>" class="photo" width="350px" height="350px">
                     <h1 class="title"><?php echo $value['title']; ?></h1>
                     <p class="contents"><?php echo $value['contents']; ?></p>
                 </div>
