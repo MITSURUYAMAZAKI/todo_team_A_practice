@@ -1,29 +1,37 @@
 <?php
-    require_once('./Models/Model.php');
-    require_once('./Models/Task.php');
-    
-    $task = new Task();
-    $tasks =  $task->getAll();
-    // var_dump($tasks);
+require_once('./Models/Model.php');
+require_once('./Models/Task.php');
+
+
+$task = new Task();
+$tasks =  $task->getAll();
+// var_dump($tasks);
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todoアプリ</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        <?php include 'style.css'; ?>
+    </style>
 </head>
+
 <body>
     <?php include('./include/header.php'); ?>
     <main>
         <div class="feed">
-            <?php foreach ($tasks as $value):?>
+            <?php foreach ($tasks as $value) : ?>
                 <div class="article">
-                    <img src="./images/macbook.png" alt="<?php echo "$value[0]";?>" class="photo" width="350px" height="350px">
+                    <img src="./images/macbook.png" alt="<?php echo "$value[0]"; ?>" class="photo" width="350px" height="350px">
+                    <h1 class="topic">山崎さんといえば？</h1>
                     <h1 class="title"><?php echo $value['title']; ?></h1>
+                    <h1 class="description">どんなところが好き？</h1>
                     <p class="contents"><?php echo $value['contents']; ?></p>
                 </div>
             <?php endforeach; ?>
@@ -31,4 +39,5 @@
     </main>
     <?php include('./include/footer.php'); ?>
 </body>
+
 </html>
