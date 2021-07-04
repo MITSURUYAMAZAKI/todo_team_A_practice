@@ -1,11 +1,10 @@
 <?php
-require_once('./Models/Model.php');
 require_once('./Models/Task.php');
 
 
 $task = new Task();
 $tasks =  $task->getAll();
-// var_dump($tasks);
+
 ?>
 
 <!DOCTYPE html>

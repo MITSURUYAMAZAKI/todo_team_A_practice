@@ -8,7 +8,7 @@ class Task extends Model
     protected $table = 'tasks';
 
     // タスク作成のメソッド
-    public function create($data)
+    public function create($data) 
     {
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('INSERT INTO ' . $this->table . ' (title, contents, created) VALUES (?, ?, ?)');
