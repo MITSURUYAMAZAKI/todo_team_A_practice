@@ -1,4 +1,5 @@
 <?php
+
 // read the file
 require_once('./models/task.php');
 
@@ -13,3 +14,4 @@ $task->create([$title,$contents,$timestamp]);
 
 // redirect to index.php
 header('location:index.php');
+

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todoアプリ</title>
+
     <link rel="stylesheet" href="style.css">
     <style>
         <?php include 'style.css';?>
@@ -32,9 +33,7 @@
             <button type="submit" class="btn btn-primary">POST</button>
         </div>
 
-    </form>
-
-
-</body>
+    </form>   
 
 </html>
+
