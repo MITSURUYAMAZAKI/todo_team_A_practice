@@ -1,9 +1,9 @@
 <?php
-require_once('./Models/Task.php');
 
-
-$task = new Task();
-$tasks =  $task->getAll();
+    require_once('./Models/Task.php');
+    
+    $task = new Task();
+    $tasks =  $task->getAll();
 
 ?>
 
@@ -16,9 +16,7 @@ $tasks =  $task->getAll();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todoアプリ</title>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        <?php include 'style.css'; ?>
-    </style>
+   
 </head>
 
 <body>
@@ -27,10 +25,13 @@ $tasks =  $task->getAll();
         <div class="feed">
             <?php foreach ($tasks as $value) : ?>
                 <div class="article">
-                    <img src="./images/macbook.png" alt="<?php echo "$value[0]"; ?>" class="photo" width="350px" height="350px">
-                    <h1 class="topic">山崎さんといえば？</h1>
+
+                    <img src="./images/macbook.png" alt="<?php echo $value['title'];?>" class="photo" width="350px" height="350px">
+
                     <h1 class="title"><?php echo $value['title']; ?></h1>
+
                     <h1 class="explanation">どんなところが好き？</h1>
+
                     <p class="contents"><?php echo $value['contents']; ?></p>
                 </div>
             <?php endforeach; ?>
