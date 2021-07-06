@@ -8,9 +8,7 @@
     <title>Todoアプリ</title>
 
     <link rel="stylesheet" href="style.css">
-    <style>
-        <?php include 'style.css';?>
-    </style>
+  
 </head>
 
 <body>
