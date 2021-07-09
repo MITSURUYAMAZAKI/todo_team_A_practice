@@ -44,15 +44,11 @@ header a:hover{
 }
 
 .btn{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: rgb(187, 255, 0);
-  display: none;
+  font-size: large;
 }
-
-/* .btn-line{
-  display:none
-} */
 
 .form {
   padding: 10px;
@@ -61,13 +57,12 @@ header a:hover{
 
 .search{
   padding: 10px;
+  background-color: yellow;
 }
 
-/* ◆を使うものは共通で */
-
-
-
-/* ◆を使うものは共通で */
+.search:hover{
+  background-color: aqua;
+}
 
 footer{
   background-color: rgb(18, 168, 68);
@@ -79,39 +74,58 @@ footer{
   align-items: center;
 }
 
-
-
-
+.btn{
+  display: none;
+}
 
 @media screen and (max-width: 599px){
+
+  header nav{
+    box-sizing: border-box;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: rgba(167, 148, 58, 0.63);
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+
   header ul{
     width: 35vw;
-    /* height: 100vh; */
     margin-top: auto;
     margin-left: auto;
     /* メニューを縦に */
     display: flex;
     flex-direction: column;
-    /* color: #efefef; */
-    background-color: rgba(167, 148, 58, 0.7);
-    /* transition: .3s;/ */
+    align-items: center;
   }
   
- 
+  header li{
+    margin: 10px;
+  }
 
+  header a{
+    text-decoration: none;
+    font-size: large;
+  }
 
   .btn{
     width: 30px;
     height: 30px;
     background-color: rgb(187, 255, 0);
+    display: block;
   }
 
-  header li{
-    margin: 10px;
+  .form-inline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  header a{
-    text-decoration: none;
-    font-size: large;
+
+  .search{
+    margin: 10px;
   }
   }
