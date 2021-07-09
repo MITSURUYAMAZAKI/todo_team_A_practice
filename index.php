@@ -27,9 +27,9 @@
                 <div class="article">
 
                     <img src="./images/macbook.png" alt="<?php echo $value['title'];?>" class="photo" width="350px" height="350px">
-
+                    <h1 class="topic">山崎さんといえば？</h1>
                     <h1 class="title"><?php echo $value['title']; ?></h1>
-                  
+                    <h1 class="explanation">どんなところが好き？</h1>
                     <p class="contents"><?php echo $value['contents']; ?></p>
                 </div>
             <?php endforeach; ?>
