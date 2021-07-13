@@ -24,8 +24,9 @@ main{
   border: solid gray 1px;
   margin: 3px;
   background-color: aliceblue;
-  width: 30%;
+  width: 100%;
   max-height:400px ;
+  max-width:300px;
 
 }
 
