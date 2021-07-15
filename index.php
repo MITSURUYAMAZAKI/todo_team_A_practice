@@ -1,10 +1,7 @@
 <?php
-
     require_once('./Models/Task.php');
-    
     $task = new Task();
     $tasks =  $task->getAll();
-
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +28,13 @@
                     <h1 class="title"><?php echo $value['title']; ?></h1>
                   
                     <p class="contents"><?php echo $value['contents']; ?></p>
+                    <div>
+                    <a href="edit.php?id=<?= h($task['id']); ?>" class="btn text-success">EDIT</a>
+                                <form action="delete.php" method="post">
+                                    <input type="hidden" name="id" value="<?= h($task['id']); ?>">
+                                    <button type="submit" class="btn text-danger">DELETE</button>
+                                </form>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>
