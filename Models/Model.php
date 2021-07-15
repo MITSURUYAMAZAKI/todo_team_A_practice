@@ -29,20 +29,21 @@ class Model
     }
 
     // idを指定してデータを1件取得するメソッド
-    public function findById()
+    public function findById($id)
     {
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' WHERE id = ?');
-
+        $stmt->execute([$id]);
+        $task = $stmt->fetch();
+        return $task;
 
     }
 
 
-    public function delete()
+    public function delete($id)
     {
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('DELETE FROM ' . $this->table . ' WHERE id = ?');
-
-        
+        $stmt->execute($id);
     }
 }

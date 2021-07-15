@@ -1,6 +1,8 @@
 <?php
 require_once('./Models/Task.php');
-
+$id = $_GET['id'];
+$task = new Task();
+$task = $task ->findById($id);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -17,16 +19,17 @@ require_once('./Models/Task.php');
 
     </header>
 
-    <form action="store.php" method="POST">
+    <form action="update.php" method="POST">
 
         <div class="box">
             <label for="title">山崎さんといえば？</label>
-            <input type="text" class="form-control" name="title" id="title">
+            <input type="text" class="form-control" name="title" id="title" value="<?php echo $task['title']?> ">
         </div>
         <div class="box">
             <label for="contents">どんなところが好き？</label>
-            <textarea type="text" class="form-control" name="contents" id="contents" cols="30" rows="10"></textarea>
+            <textarea type="text" class="form-control" name="contents" id="contents" cols="30" rows="10"><?php echo $task['contents']?></textarea>
         </div>
+        <input type="hidden" name="id" id="id" value="<?php echo $task['id']?>">
         <div class="d-flex justify-content-end">
             <button type="submit" class="btn btn-primary">POST</button>
         </div>
