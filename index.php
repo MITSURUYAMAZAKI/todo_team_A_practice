@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todoアプリ</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
    
 </head>
 
